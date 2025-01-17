@@ -1,7 +1,7 @@
 import discord
-import sqlite3
-import os
-from dotenv import load_dotenv
+import sqlite3 # For accessing the the database to  make the data easier to manager long term
+import os # For loading the token from .env file
+from dotenv import load_dotenv # For loainding the token from .env file
 
 load_dotenv()
 token = os.getenv('DISCORD_TOKEN')
@@ -32,4 +32,4 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 client = MyClient(intents=intents)
-client.run(token) # Replace with your own token.
+client.run(token) # Replace with your own token if you aren't using a .env file or have it in your local constants.
