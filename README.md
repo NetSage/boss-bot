@@ -1,4 +1,4 @@
-#H1 Boss Bot for Discord
+#H1Boss Bot for Discord
 
 A pretty simple bot with an sqlite database for managing the data.  Currenlty just picks a random quote from the DB and sends a message containing into discord.
 
