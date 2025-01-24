@@ -11,7 +11,7 @@ def get_quote():
     cursor = connection.cursor()
     bossQuote = cursor.execute("SELECT Name, Quote FROM Quote INNER JOIN Boss ON Quote.Boss = Boss.BID ORDER BY RANDOM() LIMIT 1").fetchone()
 
-    quote = bossQuote[1] + " - " + bossQuote[0]
+    quote = f'{bossQuote[1]} - {bossQuote[0]}'
 
     connection.close()
     return quote
